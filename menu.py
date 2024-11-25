@@ -19,9 +19,17 @@ def mostrar_menu():
         a = float(input("Introduce el primer número: "))
         b = float(input("Introduce el segundo número: "))
         print(multiplicar(a, b))
-    elif opcion == 4:
-        a = float(input("Introduce el primer número: "))
-        b = float(input("Introduce el segundo número: "))
-        print(dividir(a, b))
+    elif opcion == "4":
+            try:
+                num1 = float(input("Introduce el primer número: "))
+                num2 = float(input("Introduce el segundo número: "))
+                resultado = dividir(num1, num2)
+                print(f"El resultado de la división es: {resultado}")
+            except ZeroDivisionError:
+                print("Error: No se puede dividir por cero.")
+            except ValueError:
+                print("Error: Ambos valores deben ser números.")
     elif opcion == 5:
         print("Saliendo del programa.")
+
+       
