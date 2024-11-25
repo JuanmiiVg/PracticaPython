@@ -19,3 +19,16 @@ def multiplicar(a, b):
             resultado = -resultado
         return resultado
     return "Error: valores no numéricos"
+
+# Crear función dividir
+def dividir(a, b):
+    if not isinstance(a, (int, float)) or not isinstance(b, (int, float)):
+        raise ValueError("Ambos valores deben ser int o float")
+    if b == 0:
+        raise ValueError("El divisor no puede ser cero")
+    resultado = 0
+    while a >= b:
+        a -= b
+        resultado += 1
+    return resultado
+
