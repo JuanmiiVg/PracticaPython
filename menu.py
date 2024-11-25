@@ -5,6 +5,7 @@ def mostrar_menu():
     print("3- Multiplicar")
     print("4- Dividir")
     print("5- Salir")
+    print("6- Calcular el factorial de un número (Iterativo)") 
 
     opcion = int(input("Elige una opción: "))
     if opcion == 1:
