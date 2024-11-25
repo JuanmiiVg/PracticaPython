@@ -7,7 +7,9 @@ def mostrar_menu():
         print("4- Dividir")
         print("5- Factorial (Iterativo)")
         print("6- Factorial (Recursivo)")
-        print("7- Salir")
+        print("7- Fibonacci")
+        print("8- Salir")
+
 
         opcion = input("Selecciona una opción: ")
 
@@ -49,9 +51,12 @@ def mostrar_menu():
             	print(f"El factorial (recursivo) de {num} es: {factorial_recursivo(num)}")
         	except ValueError as e:
             	print(e)
-
-        elif opcion == "7":
-            print("Saliendo del programa...")
+        elif opcion == "7": 
+            try: num = int(input("Introduce el índice de Fibonacci: ")) 
+                print(f"El {num}-ésimo número de Fibonacci es: {fibonacci_iterativo(num)}") 
+            except ValueError as e: print("Error:", e)
+        elif opcion == "8":
+                print("Saliendo del programa...")
             break
         else:
             print("Opción no válida. Intenta de nuevo.")

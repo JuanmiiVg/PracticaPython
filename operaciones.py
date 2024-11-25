@@ -49,3 +49,23 @@ def factorial_recursivo(n):
 	if n == 0 or n == 1:
     	return 1
 	return n * factorial_recursivo(n - 1)
+        
+# fibonacci.py
+def fibonacci_iterativo(n):
+	"""
+	Calcula el n-ésimo número de Fibonacci de forma iterativa.
+	:param n: El índice del número de Fibonacci que se quiere calcular.
+	:return: El n-ésimo número de Fibonacci.
+	"""
+	if not isinstance(n, int) or n < 0:
+    	raise ValueError("El número debe ser un entero no negativo.")
+    
+	if n == 0:
+    	return 0
+	elif n == 1:
+    	return 1
+
+	a, b = 0, 1
+	for _ in range(2, n + 1):
+    	a, b = b, a + b
+	return b
