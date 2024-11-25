@@ -32,3 +32,10 @@ def dividir(a, b):
         resultado += 1
     return resultado
 
+# factorial_recursivo.py
+def factorial_recursivo(n):
+	if not isinstance(n, int) or n < 0:
+    	raise ValueError("El número debe ser un entero positivo.")
+	if n == 0 or n == 1:
+    	return 1
+	return n * factorial_recursivo(n - 1)
